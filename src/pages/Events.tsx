@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Calendar, MapPin, Heart, BookOpen, Filter } from 'lucide-react';
+import { Calendar, MapPin, Heart, BookOpen, Filter, Users } from 'lucide-react';
 
 const Events = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -51,7 +51,6 @@ const Events = () => {
       time: "All Week",
       location: "Campus Wide",
       type: "charity",
-      recurring: false,
       recurring: false
     },
     {
@@ -62,7 +61,6 @@ const Events = () => {
       time: "6:00 PM - 7:30 PM",
       location: "Islamic Center",
       type: "education",
-      recurring: true,
       recurring: true
     },
     {
