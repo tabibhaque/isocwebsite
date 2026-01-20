@@ -1,0 +1,194 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Islamic MSA Design System - Premium Black, Gold & White */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    --primary: 45 85% 50%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 85% 50%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 45 85% 50%;
+
+    --radius: 0.5rem;
+
+    /* Premium MSA colors matching the logo */
+    --islamic-gold: 45 85% 50%;
+    --islamic-black: 0 0% 8%;
+    --islamic-white: 0 0% 100%;
+    --islamic-cream: 45 20% 98%;
+    --islamic-gold-light: 45 85% 85%;
+    --islamic-dark-gold: 45 85% 35%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 45 85% 55%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 63%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 45 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  .islamic-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DAA520' fill-opacity='0.08'%3E%3Cpath d='M30 30c0-16.569 13.431-30 30-30v30H30zM30 30c0 16.569-13.431 30-30 30V30h30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .islamic-gold {
+    color: hsl(var(--islamic-gold));
+  }
+
+  .bg-islamic-gold {
+    background-color: hsl(var(--islamic-gold));
+  }
+
+  .bg-islamic-black {
+    background-color: hsl(var(--islamic-black));
+  }
+
+  .bg-islamic-cream {
+    background-color: hsl(var(--islamic-cream));
+  }
+
+  .bg-islamic-dark-gold {
+    background-color: hsl(var(--islamic-dark-gold));
+  }
+
+  .text-islamic-gold {
+    color: hsl(var(--islamic-gold));
+  }
+
+  .text-islamic-black {
+    color: hsl(var(--islamic-black));
+  }
+
+  .text-islamic-dark-gold {
+    color: hsl(var(--islamic-dark-gold));
+  }
+
+  .border-islamic-gold {
+    border-color: hsl(var(--islamic-gold));
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .fade-in {
+    @apply opacity-0 translate-y-8 transition-all duration-700;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .parallax {
+    transform: translateZ(0);
+  }
+
+  /* Premium gradient backgrounds */
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--islamic-gold)) 0%, hsl(var(--islamic-dark-gold)) 100%);
+  }
+
+  .gradient-black {
+    background: linear-gradient(135deg, hsl(var(--islamic-black)) 0%, rgba(0,0,0,0.8) 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--islamic-cream));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--islamic-gold));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--islamic-dark-gold));
+}
